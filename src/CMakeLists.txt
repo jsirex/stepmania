@@ -423,7 +423,9 @@ endif()
 
 set_property(TARGET "${SM_EXE_NAME}" PROPERTY FOLDER "Internal Libraries")
 
-list(APPEND SMDATA_LINK_LIB "lua-5.1")
+list(APPEND SMDATA_LINK_LIB "lua-5.1"
+  "usb"
+)
 include(../extern/CMakeProject-mmmagic.cmake)
 
 if(HAS_MP3)
